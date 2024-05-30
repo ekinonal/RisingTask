@@ -24,7 +24,7 @@ const Sidebar = () => {
           <IoPerson className="text-2xl hover:text-blue-800" />
         </span>
       </Link>
-      <Link href="/logout">
+      <Link href="">
         <span>
           <IoLogOutOutline className="text-2xl hover:text-blue-800" />
         </span>
