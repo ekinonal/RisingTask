@@ -37,8 +37,7 @@ const Table: React.FC = () => {
       );
       setTableData(response.data.data);
     } catch (error) {
-      router.push("/");
-      Cookies.remove("token");
+    
     } finally {
       setLoading(false);
     }
