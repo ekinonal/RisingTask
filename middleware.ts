@@ -17,6 +17,11 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/dashboard", req.url));
   }
 
+  if (req.nextUrl.pathname === "/logout") {
+    const response = NextResponse.redirect(new URL("/", req.url));
+    response.cookies.delete("token");
+    return response;
+  }
 
   return NextResponse.next();
 }
