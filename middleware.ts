@@ -6,8 +6,7 @@ export function middleware(req: NextRequest) {
   // Eğer token yoksa giriş sayfasına yönlendir
   if (
     !token &&
-    req.nextUrl.pathname !== "/" &&
-    req.nextUrl.pathname !== "/logout"
+    req.nextUrl.pathname !== "/" 
   ) {
     return NextResponse.redirect(new URL("/", req.url));
   }
@@ -17,16 +16,12 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/dashboard", req.url));
   }
 
-  if (req.nextUrl.pathname === "/logout") {
-    const response = NextResponse.redirect(new URL("/", req.url));
-    response.cookies.delete("token");
-    return response;
-  }
+
 
   return NextResponse.next();
 }
 
 // Middleware'in hangi yolları dinleyeceğini belirleyin
 export const config = {
-  matcher: ["/", "/logout", "/dashboard/:path*"],
+  matcher: ["/", "/dashboard/:path*"],
 };
