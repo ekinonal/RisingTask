@@ -40,6 +40,7 @@ const Table: React.FC = () => {
       if(error.response.status === 400){
 
         Cookies.remove("token")
+        router.push("/")
       }
       
     } finally {
