@@ -35,10 +35,7 @@ const CardContainer: React.FC = () => {
       );
       setInfoData(response.data);
     } catch (error) {
-      if(error.response.status == 400){
-      Cookies.remove("token");
-      router.push("/");
-    }
+   console.log("card" , error)
     }
   };
 
