@@ -36,13 +36,11 @@ const Table: React.FC = () => {
         }
       );
       setTableData(response.data.data);
-    } catch (error : any) {
-      if(error.response.status === 400){
-
-        Cookies.remove("token")
-        router.push("/")
+    } catch (error: any) {
+      if (error.response.status === 400) {
+        Cookies.remove("token");
+        router.push("/");
       }
-      
     } finally {
       setLoading(false);
     }
@@ -52,7 +50,7 @@ const Table: React.FC = () => {
     console.log(`Number of IP: ${ipCount}`);
   };
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="mx-auto w-8/12">Loading...</p>
   }
 
   return (

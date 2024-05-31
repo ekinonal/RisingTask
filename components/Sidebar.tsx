@@ -8,7 +8,7 @@ const Sidebar = () => {
       <span className="flex items-center justify-center w-12 h-12 cursor-pointer">
         <Image alt="Rising Dijital Logo" src={MyIcon} />
       </span>
-      <Link href="/dashboard">
+      <Link href="">
         {" "}
         <span className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg cursor-pointer">
           <IoHome className="text-2xl text-blue-800" />
@@ -24,7 +24,7 @@ const Sidebar = () => {
           <IoPerson className="text-2xl hover:text-blue-800" />
         </span>
       </Link>
-      <Link href="/logout">
+      <Link href="">
         <span>
           <IoLogOutOutline className="text-2xl hover:text-blue-800" />
         </span>

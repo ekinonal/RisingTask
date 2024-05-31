@@ -42,7 +42,7 @@ const CardContainer: React.FC = () => {
       }
     }
   };
-
+  
   return (
     <div className="mx-auto w-10/12  flex flex-col space-y-4 space-x-0 lg:flex-row lg:space-y-0 lg:space-x-4 lg:w-4/5">
       {infoData ? (
@@ -65,7 +65,7 @@ const CardContainer: React.FC = () => {
           />
         </>
       ) : (
-        <p>Loading...</p>
+        <p className="mx-auto w-10/12">Loading...</p>
       )}
     </div>
   );
