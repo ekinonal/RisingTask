@@ -34,9 +34,9 @@ const CardContainer: React.FC = () => {
         }
       );
       setInfoData(response.data);
-    } catch (error) {
+    } catch (error : any) {
       if(error.response.status === 400){
-        
+
         Cookies.remove("token")
       }
     }
